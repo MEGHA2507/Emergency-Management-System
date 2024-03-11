@@ -1,0 +1,15 @@
+.contact-details-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-tile {
+    width: 28%;
+    padding: 1.5rem;
+    border: 1px solid grey;
+    border-radius: 1.5rem;
+    margin: 1rem 0.5rem;
+    text-align: center;
+}
