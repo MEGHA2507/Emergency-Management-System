@@ -35,6 +35,6 @@ export class EmergencyRequestFormComponent {
   }
 
   emergencyRequestFormSubmit(){
-
+    console.log(this.emergencyRequestForm);
   }
 }

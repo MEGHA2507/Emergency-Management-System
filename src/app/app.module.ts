@@ -20,6 +20,9 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { FormsModule } from '@angular/forms';
 import { EmergencyRequestFormComponent } from './emergency-request-form/emergency-request-form.component';
+import { EmergencyListComponent } from './emergency-list/emergency-list.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,7 @@ import { EmergencyRequestFormComponent } from './emergency-request-form/emergenc
     OfflineSupportComponent,
     HeaderComponent,
     EmergencyRequestFormComponent,
+    EmergencyListComponent,
   ],
   imports: [
     HttpClientModule,
@@ -40,6 +44,8 @@ import { EmergencyRequestFormComponent } from './emergency-request-form/emergenc
     MatIconModule,
     MatGridListModule,
     MatMenuModule,
+    MatTableModule,
+    MatPaginatorModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
