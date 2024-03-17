@@ -16,8 +16,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { FormsModule } from '@angular/forms';
+import { EmergencyRequestFormComponent } from './emergency-request-form/emergency-request-form.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { FormsModule } from '@angular/forms';
     DashboardComponent,
     OfflineSupportComponent,
     HeaderComponent,
+    EmergencyRequestFormComponent,
   ],
   imports: [
     HttpClientModule,
@@ -36,6 +39,7 @@ import { FormsModule } from '@angular/forms';
     MatToolbarModule,
     MatIconModule,
     MatGridListModule,
+    MatMenuModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,

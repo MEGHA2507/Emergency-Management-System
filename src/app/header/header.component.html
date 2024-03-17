@@ -1,15 +1,24 @@
-<p>
-    <mat-toolbar color="primary">
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <span>My App</span>
-      <span class="example-spacer"></span>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>favorite</mat-icon>
-      </button>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>share</mat-icon>
-      </button>
-    </mat-toolbar>
-  </p>
+<div class="header-container">
+  <div class="logo-conatiner">
+    <img src="../../assets/images/logo.jpg" alt="app-logo" class="app-logo">
+  </div>
+
+  <div class="header-action-conatiner">
+    <div class="offline-support">
+      <button (click)="offlineSupport()"> Offline Support Page</button>
+    </div>
+    <div class="about-us">
+      <button>About Us</button>
+    </div>
+    <div class="contact-us">
+      <button>Contact Us</button>
+    </div>
+    <div class="loggedIn-user-avatar">
+      <button class="avatar" [matMenuTriggerFor]="menu">MB</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="logout()">Logout</button>
+ 
+</mat-menu>
+    </div>
+  </div>
+</div>

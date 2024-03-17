@@ -6,7 +6,8 @@
     max-width: 500px;
     width: 100%;
     margin: auto;
-    padding-top: 2rem;;
+    padding-top: 2rem;
+      text-align: center;
   }
   
   .example-full-width {
@@ -24,3 +25,6 @@
   .example-spacer {
       flex: 1 1 auto;
   }
+.center {
+  text-align: center;
+}

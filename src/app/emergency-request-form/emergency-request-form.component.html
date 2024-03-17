@@ -1,0 +1,49 @@
+<div class="emergency-request-form">
+    <h3>Emergency Request Form</h3>
+    <form [formGroup]="emergencyRequestForm">
+        <div class="row">
+            <mat-form-field appearance="fill" class="typeofRequest">
+                <mat-label>Type of Request </mat-label>
+                <mat-select formControlName="typeOfRequest" multiple>
+                  <mat-select-trigger>
+                    {{emergencyRequestForm.controls['typeOfRequest'].value?.[0] || ''}}
+                    <span *ngIf="(emergencyRequestForm.controls['typeOfRequest'].value?.length || 0) > 1" class="example-additional-selection">
+                      (+{{(emergencyRequestForm.controls['typeOfRequest'].value?.length || 0) - 1}} {{emergencyRequestForm.controls['typeOfRequest'].value?.length === 2 ? 'other' : 'others'}})
+                    </span>
+                  </mat-select-trigger>
+                  <mat-option *ngFor="let typeOfRequest of typeOfRequestList" [value]="typeOfRequest">{{typeOfRequest}}</mat-option>
+                </mat-select>
+                <mat-error *ngIf="emergencyRequestForm.controls.typeOfRequest.hasError('required')">
+                    Type of Request is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+    
+           
+            <mat-form-field >
+                <mat-label>Phone Number</mat-label>
+                <span matPrefix>+91 &nbsp;</span>
+                <input type="tel" matInput placeholder="" formControlName="phoneNo">
+                <!-- <mat-icon matSuffix>mode_edit</mat-icon> -->
+                <mat-error *ngIf="emergencyRequestForm.controls.phoneNo.hasError('required')">
+                    Phone Number is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+        </div>
+       
+        <div class="row">
+            <mat-form-field class="example-full-width">
+                <mat-label>Pin Location</mat-label>
+                <textarea matInput placeholder="" formControlName="pinLocation"></textarea>
+                <mat-error *ngIf="emergencyRequestForm.controls.pinLocation.hasError('required')">
+                    Pin Location is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+        </div>
+      
+      <div>
+        <button mat-raised-button color="primary" [disabled]="emergencyRequestForm.invalid" (click)="emergencyRequestFormSubmit()">Submit</button>
+
+      </div>
+       
+    </form>
+</div>

@@ -1,32 +1,32 @@
 <div class="login-page">
     <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
         <mat-tab label="Login" class="tab">
-            <div class="loginForm" [formGroup]="loginFormGroup">
-                <form class="example-form">
+            <div class="loginForm">
+                <form class="example-form" [formGroup]="loginFormGroup">
                     <mat-form-field class="example-full-width">
                         <mat-label>Username</mat-label>
-                        <input type="text" matInput formControlName="username" placeholder="Ex. abc123">
+                        <input type="text" matInput formControlName="username" placeholder="">
                         <mat-error *ngIf="loginFormGroup.controls.username.hasError('required')">
                             Username is <strong>required</strong>
                         </mat-error>
                         </mat-form-field>
                         <mat-form-field class="example-full-width">
                             <mat-label>Password</mat-label>
-                            <input type="password" matInput formControlName="password" placeholder="Ex. Abc@123">
+                            <input type="password" matInput formControlName="password" placeholder="">
                         
                             <mat-error *ngIf="loginFormGroup.controls.password.hasError('required')">
                                 Password is <strong>required</strong>
                             </mat-error>
                         </mat-form-field>
-                        <button mat-raised-button color="primary" [disabled]="loginFormGroup.invalid" (click)="loginSubmit()">Primary</button>
+                        <button mat-raised-button color="primary" [disabled]="loginFormGroup.invalid" (click)="loginSubmit()" class="center">Login</button>
                         </form>
                         
                         </div>
                         </mat-tab>
                         
                         <mat-tab label="Sign Up" class="tab">
-                            <div class="signUpForm" [formGroup]="signUpFormGroup">
-                                <form class="example-form">
+                            <div class="signUpForm">
+                                <form class="example-form" [formGroup]="signUpFormGroup">
                                     <mat-form-field class="example-full-width w-50">
                                         <mat-label>First Name</mat-label>
                                         <input type="text" matInput formControlName="firstName" placeholder="Ex. abc123">
@@ -109,7 +109,7 @@
             Password is <strong>required</strong>
         </mat-error>
         </mat-form-field>
-<button mat-raised-button color="primary" [disabled]="signUpFormGroup.invalid" (click)="signupSubmit()">Primary</button>
+<button mat-raised-button color="primary" [disabled]="signUpFormGroup.invalid" (click)="signupSubmit()">Sign Up</button>
                 </form>
                 
                 </div>

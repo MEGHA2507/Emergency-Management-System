@@ -1,16 +1,2 @@
 <app-header></app-header>
-<button mat-raised-button color="primary" (click)="offlineSupport()">Go to offline support</button>
-<div class="emergency-request-form">
-    <h3>Emergency Request Form</h3>
-    <form [formGroup]="emergencyRequestForm">
-        <!-- <mat-form-field>
-            <mat-label>Favorite food</mat-label>
-            <mat-select [value]="selectedValue" name="food">
-               
-                <mat-option *ngIf="let food of foods" value="food.value">{{food.viewValue}}</mat-option>
-                
-            </mat-select>
-        </mat-form-field>
-        <p> Selected food: {{selectedValue}} </p> -->
-    </form>
-</div>
+<app-emergency-request-form></app-emergency-request-form>
