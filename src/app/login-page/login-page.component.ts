@@ -14,7 +14,7 @@ export class LoginPageComponent {
   countries = [];
 
   loginFormGroup = new FormGroup({
-    username: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required])
   });
 
